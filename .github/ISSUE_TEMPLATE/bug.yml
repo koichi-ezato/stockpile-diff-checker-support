@@ -1,0 +1,30 @@
+name: Bug report / 不具合報告
+description: Report an app problem without personal information.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Issues are public. Do not include personal, purchase, device identifier, or stockpile information. / Issueは公開されます。個人・購入・端末識別子・備蓄情報を書かないでください。"
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform / 端末
+      options: [iOS, Android]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version / アプリバージョン
+      placeholder: "1.0.0"
+  - type: textarea
+    id: issue
+    attributes:
+      label: What happened? / 発生したこと
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 再現手順
